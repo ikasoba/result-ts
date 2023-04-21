@@ -3,7 +3,7 @@ result-ts provides a class that is useful when dealing with exceptions in TypeSc
 </center>
 
 ![npm](https://img.shields.io/npm/v/@ikasoba000/result-ts?style=flat-square)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ikasoba/result-ts/test.yaml?label=test)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ikasoba/result-ts/test.yaml?label=test&style=flat-square)
 
 ```ts
 import { Result } from "@ikasoba000/result-ts";
