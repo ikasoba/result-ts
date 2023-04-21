@@ -2,7 +2,7 @@
 result-ts provides a class that is useful when dealing with exceptions in TypeScript.
 </p>
 
-[![npm](https://img.shields.io/npm/v/@ikasoba000/result-ts?style=flat-square)](https://www.npmjs.com/package/@ikasoba000/parsing)
+[![npm](https://img.shields.io/npm/v/@ikasoba000/result-ts?style=flat-square)](https://www.npmjs.com/package/@ikasoba000/result-ts)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ikasoba/result-ts/test.yaml?label=test&style=flat-square)
 
 ```ts
