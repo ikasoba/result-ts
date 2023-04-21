@@ -4,15 +4,17 @@ on:
   - push
   - workflow_dispatch
 
-steps:
-  - name: install nodejs
-    uses: actions/setup-node@v3
+jobs:
+  test:
+    steps:
+      - name: install nodejs
+        uses: actions/setup-node@v3
 
-  - name: install pnpm
-    uses: pnpm/action-setup@v2
+      - name: install pnpm
+        uses: pnpm/action-setup@v2
 
-  - name: install dependencies
-    run: pnpm i
+      - name: install dependencies
+        run: pnpm i
 
-  - name: execute all test
-    run: pnpm run test
+      - name: execute all test
+        run: pnpm run test
