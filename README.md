@@ -27,4 +27,24 @@ if (result.isError()){
 console.log(`hello, ${result.value.name}!`)
 ```
 
-# about
+# Result.ok&lt;T>(value: T): Result&lt;T, never>
+
+Returns a `successful` Result.
+
+# Result.err&lt;E>(value: E): Result&lt;never, E>
+
+Returns a `Result` containing an exception.
+
+# Result.toCurrentResult&lt;T, E>(result: ResultLike&lt;T, E>): Result&lt;T, E>
+
+Generates a `Result` from a `ResultLike`.
+
+This is useful when converting Results between different versions.
+
+# Result#isOk(): boolean
+
+Check to see if the Result was successful.
+
+# Result#isError(): boolean
+
+Check to see if the Result failed.

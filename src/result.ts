@@ -32,16 +32,18 @@ export class ResultImpl<T, E> {
 export interface ResultInterface<T, E> {
   value: T | E;
 
-  isOk(): this is ResultInterface<T, never>;
-  isError(): this is ResultInterface<never, E>;
+  isOk(): this is ResultLike<T, never>;
+  isError(): this is ResultLike<never, E>;
 }
+
+export type ResultLike<T, E> =
+  | ResultInterface<T, never>
+  | ResultInterface<never, E>;
 
 export type Result<T, E> = ResultImpl<T, never> | ResultImpl<never, E>;
 
 export const Result = {
-  toCurrentResult<T, E>(
-    result: ResultInterface<T, never> | ResultInterface<never, E>
-  ): Result<T, E> {
+  toCurrentResult<T, E>(result: ResultLike<T, E>): Result<T, E> {
     if (result.isOk()) {
       return Result.ok(result.value);
     } else {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { Result, ResultInterface } from "../src";
+import { Result, ResultLike } from "../src";
 
 test("Result.ok", () => {
   const result = Result.ok(1234);
@@ -31,7 +31,7 @@ test("Result.ok | Result.err", () => {
 });
 
 test("Result.toCurrentResult", () => {
-  const oldResult: ResultInterface<number, never> = {
+  const oldResult: ResultLike<number, never> = {
     value: 1234,
     isOk() {
       return true;
