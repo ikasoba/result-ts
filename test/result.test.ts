@@ -45,3 +45,21 @@ test("Result.toCurrentResult", () => {
   expect(result.isOk()).eq(true);
   expect(result.isError()).eq(false);
 });
+
+async function fetchUser(): Result<any, number> {
+  const response = fetch( ... );
+  if (!response.ok) return Result.err(response.status);
+  return Result.ok(response.json());
+}
+
+const result = await fetchUser()
+
+if (result.isError()){
+  console.error(
+      "Failed to fetch user."
+    + `Status code: ${result.value}`
+  );
+  process.exit(1);
+}
+
+console.log(`hello, ${result.value.name}!`)

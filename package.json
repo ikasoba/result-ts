@@ -1,8 +1,13 @@
 {
-  "name": "result-ts",
+  "name": "@ikasoba000/result-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dest/esm/index.js",
+  "exports": {
+    "default": "./dest/esm/index.js",
+    "import": "./dest/esm/index.js",
+    "require": "./dest/cjs/index.js"
+  },
   "scripts": {
     "test": "vitest",
     "prepare": "tsc --outDir dest/esm && tsc --module commonjs --outDir dest/cjs"

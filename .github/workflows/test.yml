@@ -1,0 +1,12 @@
+steps:
+  - name: install nodejs
+    uses: actions/setup-node@v3
+
+  - name: install pnpm
+    uses: pnpm/action-setup@v2
+
+  - name: install dependencies
+    run: pnpm i
+
+  - name: execute all test
+    run: pnpm run test
