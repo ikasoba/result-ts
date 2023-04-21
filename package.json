@@ -1,0 +1,17 @@
+{
+  "name": "result-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "prepare": "tsc --outDir dest/esm && tsc --module commonjs --outDir dest/cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  }
+}
